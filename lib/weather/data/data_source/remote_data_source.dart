@@ -19,6 +19,7 @@ class RemoteDataSource implements BaseRemoteDataSource{
 http.Response response  =   await http.get(Uri.parse(
   "${AppConstants.baseUrl}weather?q=$cityName&APPID=${AppConstants.apiKey}"
 ));
+print(jsonDecode(response.body));
 return WeatherModel.fromJson(json: jsonDecode(response.body));
    } catch(E)  {
 

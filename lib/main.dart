@@ -1,6 +1,17 @@
+import 'package:clean_architecture_weather/weather/data/data_source/remote_data_source.dart';
+import 'package:clean_architecture_weather/weather/data/repositry/weather_repository.dart';
+import 'package:clean_architecture_weather/weather/domain/entities/weather_entity.dart';
+import 'package:clean_architecture_weather/weather/domain/repositry/base_weather_repositry.dart';
+import 'package:clean_architecture_weather/weather/domain/usecases/get_weather_by_city_name.dart';
 import 'package:flutter/material.dart';
 
-void main() {
+void main() async {
+
+  BaseRemoteDataSource baseRemoteDataSource = RemoteDataSource();
+  BaseWeatherRepository baseWeatherRepository =
+  WeatherRepository(baseRemoteDataSource);
+ WeatherEntity weather =  await GetWeatherByCity(repository: baseWeatherRepository).execute(cityName: "London");
+ 
   runApp(const MyApp());
 }
 

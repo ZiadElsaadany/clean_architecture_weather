@@ -6,7 +6,7 @@ class WeatherRepository implements BaseWeatherRepository  {
 
 // concrete implementation for repository on domain layer
   final BaseRemoteDataSource baseRemoteDataSource ;
-  WeatherRepository({required this.baseRemoteDataSource});
+  WeatherRepository( this.baseRemoteDataSource);
 
   @override
   Future<WeatherEntity> getWeatherByCityName({required String cityName}) async {
