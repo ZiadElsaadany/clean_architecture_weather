@@ -5,13 +5,13 @@ import 'package:clean_architecture_weather/weather/domain/repositry/base_weather
 class WeatherRepository implements BaseWeatherRepository  {
 
 // concrete implementation for repository on domain layer
-  final RemoteDataSource remoteDataSource ;
-  WeatherRepository({required this.remoteDataSource});
+  final BaseRemoteDataSource baseRemoteDataSource ;
+  WeatherRepository({required this.baseRemoteDataSource});
 
   @override
   Future<WeatherEntity> getWeatherByCityName({required String cityName}) async {
 
-    return await remoteDataSource.getWeatherByCityName(cityName: cityName) ;
+    return await baseRemoteDataSource.getWeatherByCityName(cityName: cityName) ;
 
   }
 
