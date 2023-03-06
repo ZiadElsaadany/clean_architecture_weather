@@ -22,9 +22,8 @@ http.Response response  =   await http.get(Uri.parse(
 return WeatherModel.fromJson(json: jsonDecode(response.body));
    } catch(E)  {
 
-     
      return WeatherModel(id: 1
-         , description: "description", cityName: cityName, main: "main", pressure: 2);
+         , description: "description", cityName: cityName, main: "main", pressure: 2); 
 
    }
   }
