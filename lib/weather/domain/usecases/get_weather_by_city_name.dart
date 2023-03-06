@@ -4,13 +4,14 @@ import 'package:clean_architecture_weather/weather/domain/repositry/base_weather
 class GetWeatherByCity {
   // what is usecase i have?
 
+ // execute method-- >return method on BaseReposytory
 
-  final BaseWeatherRepository repositoy  ;
-  GetWeatherByCity({required this.repositoy});
+  final BaseWeatherRepository repository  ;
+  GetWeatherByCity({required this.repository});
 
   Future<WeatherEntity> execute( {required String cityName}) async {
 
-   return  await  repositoy.getWeatherByCityName(cityName: cityName);
+   return  await  repository.getWeatherByCityName(cityName: cityName);
 
 
   }
