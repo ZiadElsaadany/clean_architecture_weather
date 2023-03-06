@@ -9,5 +9,5 @@
 // -> 2  data layer
 
     // 1 models     --> put model with factory -->return entity from api
-    // 2 data source
-    // 3 repository
+    // 2 data source -> put method that send request 
+    // 3 repository --> implementation for repo in domain

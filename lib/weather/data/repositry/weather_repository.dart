@@ -4,7 +4,7 @@ import 'package:clean_architecture_weather/weather/domain/repositry/base_weather
 
 class WeatherRepository implements BaseWeatherRepository  {
 
-
+// concrete implementation for repository on domain layer
   final RemoteDataSource remoteDataSource ;
   WeatherRepository({required this.remoteDataSource});
 
