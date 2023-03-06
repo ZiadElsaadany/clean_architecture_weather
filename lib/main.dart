@@ -11,7 +11,7 @@ void main() async {
   BaseWeatherRepository baseWeatherRepository =
   WeatherRepository(baseRemoteDataSource);
  WeatherEntity weather =  await GetWeatherByCity(repository: baseWeatherRepository).execute(cityName: "London");
- 
+
   runApp(const MyApp());
 }
 
